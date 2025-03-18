@@ -1,0 +1,124 @@
+:root {
+  --section-padding: 40px;
+}
+
+.container {
+  max-width: 1400px;
+}
+
+/* Header */
+#header {
+  position: sticky;
+  top: 0;
+}
+
+/* Hero */
+#hero {
+  width: 100%;
+  height: calc(40vh - 58px);
+  background-image: url("../img/veri\ cool\ imag.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Team */
+#team {
+  padding: var(--section-padding);
+
+  .container {
+    .peoples {
+      display: flex;
+      justify-content: space-between;
+
+      .person {
+        cursor: pointer;
+        width: calc(100% / 6 - 10px);
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #team {
+    .container {
+      .peoples {
+        flex-direction: column;
+
+        .person {
+          margin: 0 auto;
+          width: 50%;
+
+          &.active {
+            border: 2px solid blue;
+          }
+
+          h2 {
+            font-size: 30px;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Requirements */
+#requirements {
+  padding: var(--section-padding);
+
+  .container {
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .description {
+      margin-bottom: 40px;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    a {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+/* Portfolio */
+#jobs {
+  padding: var(--section-padding);
+  width: 100%;
+  text-align: center;
+
+  .container {
+    width: 100%;
+
+    .job {
+      max-width: 500px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+
+      a {
+        background-color: #0d6efd;
+        padding: 10px 50px;
+        color: white;
+        border-radius: 50px;
+        text-decoration: none;
+      }
+    }
+  }
+}
